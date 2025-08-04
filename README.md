@@ -1,5 +1,5 @@
 # Automotive-Networks
-#HW2
+# HW2
 # CRC-15 CAN Simulation in VHDL
 
 ## Descripción
@@ -24,3 +24,22 @@ El objetivo es obtener el residuo (`R`) al dividir una cadena de datos `D` de 20
 -----
 
 # HW3
+
+# CANoe ECU Simulation with CAPL
+
+## Descripción
+
+Este proyecto simula nodos ECU en una red CAN utilizando **CANoe** y el lenguaje **CAPL**, permitiendo el control y monitoreo de diversas funciones de un automóvil, como:
+
+- Encendido del motor
+- Bloqueo y desbloqueo de puertas
+- Subida y bajada de ventanas
+- Sistema de intermitentes (luces direccionales y alarma)
+
+## Funcionalidades principales
+
+- 🧩 Simulación de múltiples nodos ECU (Main Control, Doors, Indicators)
+- 🎛️ Creación de paneles interactivos para control de funciones del auto
+- 📡 Configuración de mensajes y señales CAN
+- 🧠 Programación en CAPL basada en eventos y temporizadores
+- 🗃️ Generación y edición de base de datos CANdb++
