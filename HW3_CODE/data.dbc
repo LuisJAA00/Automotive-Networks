@@ -1,0 +1,148 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 12 Mirror_state: 2 Vector__XXX
+ SG_ Mirror_y : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Mirror_x : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Mirror_Exnt_Retrc : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 11 Mirror_ad: 2 Vector__XXX
+ SG_ mirror_up : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_SaveNrestore : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_right : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_retract : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_ps3 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_ps2 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_ps1 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_left : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_extend : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ mirror_dwn : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 16 WindowStateRight: 1 Vector__XXX
+ SG_ WindowPositionR : 0|8@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 10 Window_lifter_sg: 1 Vector__XXX
+ SG_ window_up : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ window_down : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Squeeze_prtc_off : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ save_po : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ right_door : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ move2_save_p : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ left_door : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 9 WindowState: 1 Vector__XXX
+ SG_ WindowPositionL : 0|8@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 8 LockingSysState: 1 Vector__XXX
+ SG_ LockState : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 7 WindowRq: 1 Vector__XXX
+ SG_ WindowStatus_sg : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 6 LockingControlRQ: 1 Vector__XXX
+ SG_ LockRequest_sg : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 4 IgnitionState: 1 Vector__XXX
+ SG_ IG_status_sg : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 0 Light_n4: 1 Vector__XXX
+ SG_ Light_state_n4 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1 Light_n3: 1 Vector__XXX
+ SG_ Light_state_n3 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 3 Light_n2: 1 Vector__XXX
+ SG_ Light_state_n2 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2 Ligth_n1: 1 Vector__XXX
+ SG_ Light_state_n1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 5 Control_Lights: 1 Vector__XXX
+ SG_ Light_control_signal : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+EV_ mirrorE_SavePos: 0 [0|1] "" 0 1 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_Pos3: 0 [0|1] "" 0 2 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_Pos2: 0 [0|1] "" 0 3 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_Pos1: 0 [0|1] "" 0 4 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_Down: 0 [0|1] "" 0 5 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_Right: 0 [0|1] "" 0 6 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_Left: 0 [0|1] "" 0 7 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_Up: 0 [0|1] "" 0 8 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_retract: 0 [0|1] "" 0 9 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ mirrorE_extend: 0 [0|1] "" 0 10 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ Window_block: 0 [0|1] "" 0 11 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ Goto: 0 [0|1] "" 0 12 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ Save: 0 [0|1] "" 0 13 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ WindowUpR: 0 [0|1] "" 0 14 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ WindowDownR_E: 0 [0|1] "" 0 15 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ WindowUpL: 0 [0|1] "" 0 16 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ WindowDownL_E: 0 [0|1] "" 0 17 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ Window_E: 0 [0|21] "" 0 18 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ LockRq_E: 0 [0|1] "" 0 19 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ IgnitionStart_E: 0 [0|1] "" 0 20 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ TurnRightE: 0 [0|1] "" 0 21 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ TurnLeftE: 0 [0|1] "" 0 22 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+EV_ AlarmE: 0 [0|1] "" 0 23 DUMMY_NODE_VECTOR3 Vector__XXX;
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+

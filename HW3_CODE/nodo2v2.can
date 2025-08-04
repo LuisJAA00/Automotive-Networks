@@ -1,0 +1,25 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+ message Light_n2 LN2;
+}
+
+on message Control_Lights
+{
+  if(this.Light_control_signal==1)
+  {
+    LN2.Light_state_n2 =0x01;
+    output(LN2);
+  }
+  else
+  {
+    LN2.Light_state_n2=0x00;
+        output(LN2);
+  }
+  
+}

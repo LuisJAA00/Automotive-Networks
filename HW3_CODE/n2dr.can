@@ -1,0 +1,74 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message D_LockingS LS;
+  msTimer t1;
+  message MC_IgnitionS ig;
+  message D_WindowS WS;
+  int ignitionStatus;
+}
+
+on message MC_LockingC
+{
+ if(this.LockRequest==1)
+{
+  setTimer(t1,500);
+}
+else{
+  LS.LockState=0;
+  output(LS);
+}
+}
+on timer t1
+{
+  LS.LockState=1;
+  outpUt(LS);
+}
+
+
+// wINDOW
+
+on message MC_WindowR
+{
+  if(ignitionStatus)
+  {
+
+    if(this.WindowsStatus ==1 )
+    {
+      if(WS.WindowPosition <= 16){
+        WS.WindowPosition++;
+
+            putValue(Window, WS.WindowPosition);
+  output(WS);
+      }
+  }// end up
+        if(this.WindowsStatus ==2 )
+    {
+      if(WS.WindowPosition > 0){
+      WS.WindowPosition--;
+      putValue(Window, WS.WindowPosition);
+  output(WS);
+      }
+    }// end DOWN
+  }// ig status
+  
+
+}//end message
+
+// ig status
+on message MC_IgnitionS
+{
+  if(this.Ignition_Status ==1)
+  {
+    ignitionStatus = 1;
+  }
+  else{
+  ignitionStatus = 0;
+  }
+}
+///////

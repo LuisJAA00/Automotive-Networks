@@ -1,0 +1,184 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message Control_Lights CLM;
+  msTimer t1;
+  msTimer t2;
+  
+  // mesages 4 tsk 3
+  
+    // mesages 4 tsk 3
+  message IgnitionState ig;
+  message LockingControlRQ lc;
+  message WindowRq Wr;
+      msTimer t1;
+  msTimer t2;
+  msTimer t3;
+  msTimer t4;
+}
+
+// codigo de el ejercicion 1
+on envVar IgnitionStart_E
+{
+  if(@IgnitionStart_E==1)
+  {
+  ig.dlc=1;
+  ig.IG_status_sg=1;
+  output(ig);
+  }
+  else{
+  ig.dlc=1;
+  ig.IG_status_sg=0;
+  output(ig);
+  }
+}
+
+
+// lock request
+on envVar LockRq_E
+{
+  
+  if(@LockRq_E==1)
+  {
+  lc.dlc=1;
+  lc.LockRequest_sg = 1;
+   output(lc);
+
+  }
+  else{
+  lc.dlc=1;
+  lc.LockRequest_sg = 0;
+   output(lc);
+  }
+}
+//////////////////////////
+
+// window up
+on envVar WindowUp
+{
+  if(@WindowUp==1)
+  {
+  Wr.dlc = 1;
+  Wr.WindowStatus_sg = 1;
+  
+   output(Wr);
+    
+    setTimer(t1,100);
+
+  }
+  else{
+  Wr.dlc=1;
+  Wr.WindowStatus_sg = 0;
+   output(Wr);
+  }
+}
+on timer t1
+{
+  if(@WindowUp==1)
+  {
+    setTimer(t2,250);
+  }
+}
+on timer t2
+{
+  setTimer(t1,250);
+  output(Wr);
+}
+// window dW
+on envVar WindowDown_E
+{
+  if(@WindowDown_E==1)
+  {
+  Wr.dlc = 1;
+  Wr.WindowStatus_sg = 2;
+   output(Wr);
+    setTimer(t3,100);
+  }
+  else{
+  Wr.dlc=1;
+  Wr.WindowStatus_sg = 0;
+   output(Wr);
+  }
+}
+on timer t3
+{
+  if(@WindowDown_E==1)
+  {
+    setTimer(t4,250);
+  }
+}
+on timer t4
+{
+  setTimer(t3,250);
+  output(Wr);
+}
+//////////////////////////
+///////////////////////////
+on envVar AlarmE
+{
+  if(@AlarmE==1)
+  {
+    CLM.dlc=1;
+    CLM.Light_control_signal =0x01;
+    output(CLM);
+    setTimer(t1,1000);
+  }
+  else{
+      CLM.dlc=1;
+    CLM.Light_control_signal =0x00;
+  }
+  
+}
+on timer t1
+{
+      CLM.dlc=1;
+    CLM.Light_control_signal =0x00;
+  output(CLM);
+  if(@AlarmE==1){
+  setTimer(t2,1000);
+  }
+}
+on timer t2
+{
+        CLM.dlc=1;
+    CLM.Light_control_signal =0x01;
+  output(CLM);
+
+  setTimer(t1,1000);
+  
+  }
+
+on envVar TurnRightE
+{
+  if(@TurnRightE==1)
+  {
+    CLM.dlc=1;
+    CLM.Light_control_signal =0x03;
+    output(CLM);
+  }
+    else{
+      CLM.dlc=1;
+    CLM.Light_control_signal =0x00;
+          output(CLM);
+  }
+}
+
+on envVar TurnLeftE
+{
+  if(@TurnLeftE==1)
+  {
+    CLM.dlc=1;
+    CLM.Light_control_signal =0x02;
+    output(CLM);
+  }
+    else{
+      CLM.dlc=1;
+    CLM.Light_control_signal =0x00;
+          output(CLM);
+  }
+}

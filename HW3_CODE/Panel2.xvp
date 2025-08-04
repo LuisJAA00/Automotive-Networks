@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Panel2">
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="AnalogGaugeControl1" ControlName="Analog Gauge">
+      <Property Name="Name">AnalogGaugeControl1</Property>
+      <Property Name="Size">188, 129</Property>
+      <Property Name="Location">292, 3</Property>
+      <Property Name="BackgroundColor">White</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXFZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTEwLjAuNzcuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsBgQAAAA2VmVjdG9yLkNBTmFseXplci5QYW5lbHMuRGVzaWduLkdhdWdlQ3JpdGljYWxQcm9wZXJ0aWVzBgUAAAAyVm9pZCAuY3RvcihEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUsIERvdWJsZSkGBgAAAFAuY3RvcihTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlLCBTeXN0ZW0uRG91YmxlKQEAAAAKCw==">
+        <Argument>0</Argument>
+        <Argument>15</Argument>
+        <Argument>0</Argument>
+        <Argument>0</Argument>
+        <Argument>15</Argument>
+      </Property>
+      <Property Name="GaugeFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="LegendText">WP</Property>
+      <Property Name="SymbolConfiguration">5;2;data3;New_Node_2;D_WindowS;WindowPosition;1;CAN;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">35, 13</Property>
+      <Property Name="Location">423, 240</Property>
+      <Property Name="Text">Down</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">22, 13</Property>
+      <Property Name="Location">312, 240</Property>
+      <Property Name="Text">UP</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl2" ControlName="LED Control">
+      <Property Name="Name">LEDControl2</Property>
+      <Property Name="Size">44, 44</Property>
+      <Property Name="Location">194, 54</Property>
+      <Property Name="UsedLEDColorOff">Gray</Property>
+      <Property Name="SymbolConfiguration">5;2;data3;New_Node_2;D_LockingS;LockState;1;CAN;;-1;;;</Property>
+      <Property Name="TabIndex">7</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl4" ControlName="Switch/Indicator 2">
+      <Property Name="Name">SwitchControl4</Property>
+      <Property Name="Size">66, 86</Property>
+      <Property Name="Location">408, 135</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="SymbolConfiguration">5;1;data3;;;WindowD;1;;;-1;;;</Property>
+      <Property Name="TabIndex">6</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl3" ControlName="Switch/Indicator 2">
+      <Property Name="Name">SwitchControl3</Property>
+      <Property Name="Size">66, 86</Property>
+      <Property Name="Location">292, 135</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="SymbolConfiguration">5;1;data3;;;WindowU;1;;;-1;;;</Property>
+      <Property Name="TabIndex">5</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl1" ControlName="Switch/Indicator 2">
+      <Property Name="Name">SwitchControl1</Property>
+      <Property Name="Size">66, 86</Property>
+      <Property Name="Location">194, 135</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="SymbolConfiguration">5;1;data3;;;LockRsq;1;;;-1;;;</Property>
+      <Property Name="TabIndex">4</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl1" ControlName="LED Control">
+      <Property Name="Name">LEDControl1</Property>
+      <Property Name="Size">44, 44</Property>
+      <Property Name="Location">107, 54</Property>
+      <Property Name="UsedLEDColorOff">Gray</Property>
+      <Property Name="SymbolConfiguration">5;2;data3;Mc;MC_IgnitionS;Ignition_Status;1;CAN;;-1;;;</Property>
+      <Property Name="TabIndex">3</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.77.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl2" ControlName="Switch/Indicator 2">
+      <Property Name="Name">SwitchControl2</Property>
+      <Property Name="Size">66, 86</Property>
+      <Property Name="Location">91, 135</Property>
+      <Property Name="StateCnt">2</Property>
+      <Property Name="SwitchValues">1;2;0;1</Property>
+      <Property Name="SymbolConfiguration">5;1;data3;;;ignitionStart;1;;;-1;;;</Property>
+      <Property Name="TabIndex">2</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">580, 270</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>

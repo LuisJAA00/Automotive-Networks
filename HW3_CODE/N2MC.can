@@ -1,0 +1,115 @@
+/*@!Encoding:1252*/
+includes
+{
+
+}
+
+variables
+{
+    message MC_IgnitionS ig;
+    message MC_LockingC LR;
+  message MC_WindowR wr;
+   
+    msTimer t1;
+  msTimer t2;
+  msTimer t3;
+  msTimer t4;
+  int IgnitionState;
+}
+
+// control ignition
+on envVar ignitionStart
+{
+  if(@ignitionStart==1)
+  {
+  ig.dlc=1;
+  ig.Ignition_Status=1;
+  output(ig);
+  }
+  else{
+  ig.dlc=1;
+  ig.Ignition_Status=0;
+  output(ig);
+  }
+}
+//////////////////////////
+
+// lock request
+on envVar LockRsq
+{
+  
+  if(@LockRsq==1)
+  {
+  LR.dlc=1;
+  LR.LockRequest = 1;
+   output(LR);
+
+  }
+  else{
+  LR.dlc=1;
+  LR.LockRequest = 0;
+   output(LR);
+  }
+}
+//////////////////////////
+
+// window up
+on envVar WindowU
+{
+  if(@WindowU==1)
+  {
+  wr.dlc = 1;
+  wr.WindowsStatus = 1;
+  
+   output(wr);
+    
+    setTimer(t1,100);
+
+  }
+  else{
+  wr.dlc=1;
+  wr.WindowsStatus = 0;
+   output(wr);
+  }
+}
+on timer t1
+{
+  if(@WindowU==1)
+  {
+    setTimer(t2,250);
+  }
+}
+on timer t2
+{
+  setTimer(t1,250);
+  output(wr);
+}
+// window dW
+on envVar WindowD
+{
+  if(@WindowD==1)
+  {
+  wr.dlc = 1;
+  wr.WindowsStatus = 2;
+   output(wr);
+    setTimer(t3,100);
+  }
+  else{
+  wr.dlc=1;
+  wr.WindowsStatus = 0;
+   output(wr);
+  }
+}
+on timer t3
+{
+  if(@WindowD==1)
+  {
+    setTimer(t4,250);
+  }
+}
+on timer t4
+{
+  setTimer(t3,250);
+  output(wr);
+}
+//////////////////////////
